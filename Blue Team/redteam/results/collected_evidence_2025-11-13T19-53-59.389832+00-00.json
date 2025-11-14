@@ -1,0 +1,37 @@
+{
+  "collected_at": "2025-11-13T19:53:59.376370+00:00",
+  "base_url": "http://localhost:8000",
+  "steps": [
+    {
+      "step": "health_check",
+      "result": {
+        "ok": false,
+        "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10a54d850>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+      }
+    },
+    {
+      "step": "post_task",
+      "request": {
+        "task": "process-expense"
+      },
+      "result": {
+        "ok": false,
+        "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /tasks (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10a5bd790>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+      }
+    },
+    {
+      "step": "run_rt01",
+      "result": {
+        "ok": false,
+        "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /tests/rt-01 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10a5c8160>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+      }
+    },
+    {
+      "step": "get_logs",
+      "result": {
+        "ok": false,
+        "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /logs (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10a5c8b20>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+      }
+    }
+  ]
+}
