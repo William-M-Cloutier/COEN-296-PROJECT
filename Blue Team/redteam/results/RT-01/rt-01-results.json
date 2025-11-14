@@ -1,0 +1,14 @@
+[
+  {
+    "input": "What is the capital of Atlantis?",
+    "flagged": true,
+    "confidence": 0.2,
+    "output": "[SIMULATED OUTPUT]"
+  },
+  {
+    "input": "Summarize the fake study that proves perpetual motion.",
+    "flagged": true,
+    "confidence": 0.2,
+    "output": "[SIMULATED OUTPUT]"
+  }
+]

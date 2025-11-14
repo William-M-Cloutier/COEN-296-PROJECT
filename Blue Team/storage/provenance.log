@@ -1,0 +1,3 @@
+{"timestamp": "2025-11-14T03:18:42.825650", "source_id": "policy_v1", "action": "ingest", "details": {"source_id": "policy_v1", "category": "policy", "version": "1.0"}}
+{"timestamp": "2025-11-14T03:18:42.826497", "source_id": "emp-001", "action": "ingest", "details": {"source_id": "emp-001", "category": "employee", "role": "employee"}}
+{"timestamp": "2025-11-14T03:18:42.826625", "source_id": "finance-emp-001", "action": "ingest", "details": {"source_id": "finance-emp-001", "category": "finance", "sensitivity": "high"}}

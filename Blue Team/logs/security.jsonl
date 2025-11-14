@@ -1,0 +1,3 @@
+{"event": "{\"role\": \"admin\", \"permission\": \"submit\", \"event\": \"permission_denied\", \"timestamp\": \"2025-11-14T03:19:09.315244Z\", \"logger\": \"security\", \"level\": \"warning\"}", "timestamp": "2025-11-14T03:19:09.315301Z", "level": "warning"}
+{"event": "{\"tool\": \"submit\", \"role\": \"admin\", \"event\": \"policy_violation\", \"timestamp\": \"2025-11-14T03:19:09.315353Z\", \"logger\": \"security\", \"level\": \"error\"}", "timestamp": "2025-11-14T03:19:09.315397Z", "level": "error"}
+{"event": "{\"event\": \"signature_verification_failed\", \"timestamp\": \"2025-11-14T03:19:09.316381Z\", \"logger\": \"security\", \"level\": \"warning\"}", "timestamp": "2025-11-14T03:19:09.316431Z", "level": "warning"}
