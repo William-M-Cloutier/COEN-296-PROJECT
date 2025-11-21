@@ -1,4 +1,0 @@
-# Delegate to root requirements to avoid duplication
--r ../requirements.txt
-
-

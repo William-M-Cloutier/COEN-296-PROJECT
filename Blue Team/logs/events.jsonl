@@ -1,5 +1,0 @@
-{"timestamp": "2025-11-14T02:54:07.816220+00:00", "actor": "user", "action": "submit_task", "role": "employee", "session_id": "2cb817ec-0f38-438a-b78f-bf2151c36ebc", "task": "search document policy"}
-{"timestamp": "2025-11-14T02:54:07.819457+00:00", "actor": "agent", "action": "task_completed", "role": "employee", "session_id": "2cb817ec-0f38-438a-b78f-bf2151c36ebc"}
-{"timestamp": "2025-11-14T02:55:06.640088+00:00", "actor": "agent", "action": "bank_update_denied", "role": "admin", "employee_id": "emp-001"}
-{"timestamp": "2025-11-14T03:19:09.308179+00:00", "actor": "redteam", "action": "rt-01", "summary": {"flagged_count": 2}}
-{"timestamp": "2025-11-14T03:19:34.195593+00:00", "actor": "redteam", "action": "rt-01", "summary": {"flagged_count": 2}}
