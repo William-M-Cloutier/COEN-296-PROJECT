@@ -1,0 +1,177 @@
+{
+  "summary": {
+    "total": 19,
+    "passed": 16,
+    "vulnerabilities": 1,
+    "errors": 1,
+    "success_rate": 84.21052631578947
+  },
+  "tests": [
+    {
+      "status": "FAIL",
+      "response": "{\"status\":\"ok\",\"user_role\":\"employee\",\"authenticated_admin\":false,\"result\":null}",
+      "test_num": 1,
+      "test_name": "Valid Expense Request",
+      "category": "Functional",
+      "timestamp": "2025-11-19T17:43:51.292496"
+    },
+    {
+      "status": "PASS",
+      "authenticated": true,
+      "test_num": 2,
+      "test_name": "Admin Upload with Valid Token",
+      "category": "Authentication",
+      "timestamp": "2025-11-19T17:43:51.295328"
+    },
+    {
+      "test_num": 3,
+      "test_name": "Valid Employee IDs",
+      "category": "Identity",
+      "status": "ERROR",
+      "error": "'NoneType' object has no attribute 'get'",
+      "timestamp": "2025-11-19T17:43:51.300434"
+    },
+    {
+      "status": "PASS",
+      "boundary_test": "passed",
+      "test_num": 4,
+      "test_name": "Policy Limit Boundary ($100)",
+      "category": "Functional",
+      "timestamp": "2025-11-19T17:43:53.312657"
+    },
+    {
+      "status": "BLOCKED",
+      "defense": "Admin Authentication",
+      "vulnerability": "None",
+      "test_num": 5,
+      "test_name": "Missing Admin Token",
+      "category": "Authentication Attack",
+      "timestamp": "2025-11-19T17:43:53.314723"
+    },
+    {
+      "status": "BLOCKED",
+      "defense": "Admin Authentication",
+      "vulnerability": "None",
+      "test_num": 6,
+      "test_name": "Invalid Admin Token",
+      "category": "Authentication Attack",
+      "timestamp": "2025-11-19T17:43:53.316812"
+    },
+    {
+      "status": "BLOCKED",
+      "defense": "Identity Validation",
+      "vulnerability": "None",
+      "test_num": 7,
+      "test_name": "Fake Employee ID",
+      "category": "Identity Attack",
+      "timestamp": "2025-11-19T17:43:53.319279"
+    },
+    {
+      "status": "BLOCKED",
+      "defense": "Input Validation",
+      "vulnerability": "None",
+      "test_num": 8,
+      "test_name": "Missing Employee ID",
+      "category": "Identity Attack",
+      "timestamp": "2025-11-19T17:43:53.321674"
+    },
+    {
+      "status": "BLOCKED",
+      "defense": "Denylist (Agent Frameworks)",
+      "vulnerability": "None",
+      "test_num": 9,
+      "test_name": "System Shutdown Command",
+      "category": "Denylist Attack",
+      "timestamp": "2025-11-19T17:43:53.324468"
+    },
+    {
+      "status": "BLOCKED",
+      "defense": "Denylist",
+      "vulnerability": "None",
+      "test_num": 10,
+      "test_name": "Transfer All Funds",
+      "category": "Denylist Attack",
+      "timestamp": "2025-11-19T17:43:53.326820"
+    },
+    {
+      "status": "BLOCKED",
+      "defense": "Denylist",
+      "vulnerability": "None",
+      "test_num": 11,
+      "test_name": "File Write Operation",
+      "category": "Denylist Attack",
+      "timestamp": "2025-11-19T17:43:53.328985"
+    },
+    {
+      "status": "DETECTED",
+      "defense": "Anomaly Detection",
+      "vulnerability": "None",
+      "test_num": 12,
+      "test_name": "High-Value Anomaly ($99,999)",
+      "category": "Anomaly Attack",
+      "timestamp": "2025-11-19T17:43:53.333494"
+    },
+    {
+      "status": "VULNERABILITY",
+      "test_num": 13,
+      "test_name": "Negative Amount",
+      "category": "Input Validation Attack",
+      "timestamp": "2025-11-19T17:43:55.358872"
+    },
+    {
+      "status": "BLOCKED",
+      "defense": "Input Validation",
+      "vulnerability": "None",
+      "test_num": 14,
+      "test_name": "Zero Amount",
+      "category": "Input Validation Attack",
+      "timestamp": "2025-11-19T17:43:57.388205"
+    },
+    {
+      "status": "BLOCKED",
+      "defense": "Policy Enforcement",
+      "vulnerability": "None",
+      "test_num": 15,
+      "test_name": "Exceeds Policy Limit",
+      "category": "Policy Enforcement",
+      "timestamp": "2025-11-19T17:43:59.408901"
+    },
+    {
+      "status": "SAFE",
+      "defense": "Mock System (No SQL)",
+      "vulnerability": "None",
+      "test_num": 16,
+      "test_name": "SQL Injection in Employee ID",
+      "category": "Injection Attack",
+      "timestamp": "2025-11-19T17:43:59.412240"
+    },
+    {
+      "status": "SAFE",
+      "defense": "No Shell Execution",
+      "vulnerability": "None",
+      "test_num": 17,
+      "test_name": "Command Injection",
+      "category": "Injection Attack",
+      "timestamp": "2025-11-19T17:43:59.418004"
+    },
+    {
+      "status": "BLOCKED",
+      "defense": "MCP Signature Validation",
+      "vulnerability": "None",
+      "test_num": 18,
+      "test_name": "MCP Signature Bypass",
+      "category": "Signature Attack",
+      "timestamp": "2025-11-19T17:43:59.420240"
+    },
+    {
+      "status": "BLOCKED",
+      "defense": "Email Signature Validation",
+      "vulnerability": "None",
+      "test_num": 19,
+      "test_name": "Email Signature Bypass",
+      "category": "Signature Attack",
+      "timestamp": "2025-11-19T17:43:59.422251"
+    }
+  ],
+  "timestamp": "2025-11-19T17:43:59.423522"
+}
