@@ -1,0 +1,36 @@
+# Core runtime dependencies
+fastapi==0.95.2
+uvicorn[standard]==0.22.0
+pydantic==1.10.7
+requests>=2.31.0
+
+# MCP (Model Context Protocol) SDK for specialized agents
+mcp>=0.9.0
+
+
+# RAG/Vector DB libraries for mocked integration
+faiss-cpu>=1.7.4
+
+# Security
+passlib[bcrypt]>=1.7.4
+cryptography>=42.0.8
+pyjwt[crypto]>=2.8.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Logging and utilities
+structlog>=24.1.0
+httpx==0.23.3
+
+# Rate limiting
+slowapi>=0.1.9
+
+# Security scanning tools (development)
+bandit>=1.7.5
+safety>=2.3.5
+pre-commit>=3.5.0
+detect-secrets>=1.4.0
+
+# Testing (optional)
+pytest>=8.2.0

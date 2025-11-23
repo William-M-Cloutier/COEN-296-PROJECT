@@ -1,0 +1,97 @@
+{
+    "version": "1.0.0",
+    "description": "Agent command whitelist for MCP server interactions - Anti-Destruction Layer",
+    "policy": "deny-by-default",
+    "last_updated": "2025-11-20",
+    "allowed_commands": {
+        "status_checks": [
+            "status",
+            "ping",
+            "health",
+            "version"
+        ],
+        "read_only_queries": [
+            "get_employee",
+            "get_profile",
+            "search_file",
+            "get_policy",
+            "check_inbox",
+            "get_logs"
+        ],
+        "safe_operations": [
+            "validate_employee",
+            "check_balance",
+            "retrieve_context"
+        ]
+    },
+    "blocked_commands": {
+        "destructive_operations": [
+            "system_shutdown",
+            "stop",
+            "kill",
+            "terminate",
+            "delete",
+            "rm",
+            "remove"
+        ],
+        "file_operations": [
+            "file_write",
+            "write_file",
+            "save_file",
+            "upload",
+            "modify_file"
+        ],
+        "financial_operations": [
+            "transfer_all_funds",
+            "transfer_funds",
+            "withdraw",
+            "delete_account"
+        ],
+        "administrative_operations": [
+            "create_admin",
+            "grant_permissions",
+            "elevate_privileges",
+            "modify_roles"
+        ]
+    },
+    "validation_rules": {
+        "command_format": {
+            "max_length": 256,
+            "allowed_characters": "alphanumeric, underscore, hyphen, space",
+            "prohibited_patterns": [
+                "&&",
+                "||",
+                ";",
+                "|",
+                "`",
+                "$(",
+                "../",
+                "/etc/",
+                "/root/"
+            ]
+        },
+        "parameter_validation": {
+            "employee_id": {
+                "pattern": "^E[0-9]{3}$",
+                "example": "E420"
+            },
+            "amount": {
+                "type": "float",
+                "min": 0.01,
+                "max": 10000.00
+            }
+        }
+    },
+    "logging": {
+        "log_all_commands": true,
+        "log_blocked_attempts": true,
+        "alert_on_blocked": true,
+        "retention_days": 90
+    },
+    "security_policy": {
+        "strict_mode": true,
+        "case_sensitive": false,
+        "substring_matching": true,
+        "fail_closed": true
+    }
+}
